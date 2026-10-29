@@ -15,7 +15,9 @@ void RF24RadioTransmitterManager::addCommandHandler(RadioReadCommandHandler *han
 }
 
 void RF24RadioTransmitterManager::update() {
-  radio.read();
+  if (!radio.read()) {
+    return;
+  }
 
   for (int i = 0; i < handlerCount; ++i) {
     handlers[i]->handleMessageReceived(radio.getReceivedText());

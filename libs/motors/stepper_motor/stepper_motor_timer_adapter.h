@@ -17,9 +17,9 @@ public:
   }
 
   void handleTimerEvent() override {
-    if (stopped) {
-        return;
-    }
+    // if (stopped) {
+    //     return;
+    // }
 
     // Update delay based on current speed
     setDelay(driver.getDelay());

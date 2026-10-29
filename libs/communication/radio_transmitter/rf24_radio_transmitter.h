@@ -10,7 +10,7 @@ private:
   uint8_t cePin;
   uint8_t csnPin;
   byte address[6];
-  char receivedText[32];
+  char receivedText[33];
   bool isDebug;
   bool isInitialized;
   // byte address[5];
