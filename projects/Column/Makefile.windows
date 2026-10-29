@@ -1,0 +1,4 @@
+.PHONY: copy-libs
+
+copy-libs:
+	powershell -NoProfile -ExecutionPolicy Bypass -File copy-libs.ps1
